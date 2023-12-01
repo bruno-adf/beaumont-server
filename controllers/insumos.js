@@ -70,5 +70,11 @@ export const deletarInsumo = async (req, res) => {
 
 export const checkInsumo = async (req, res) => {
     const { check, id , insumoId } = req.body
-    await Projeto.findByIdAndUpdate(id, {})
+    console.log(check)
+    const projeto = await Projeto.findOneAndUpdate(
+        { _id: id, 'insumos._id': insumoId },
+        { $set: { 'insumos.$.check': check } },
+        { new: true }
+    )
+    res.status(200).send(projeto)
 }
