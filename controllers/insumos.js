@@ -1,4 +1,4 @@
-import Projeto from "../models/Projeto.js"
+import Projeto from "../schemas/Projeto.js"
 import { v4 as uuidv4 } from 'uuid'
 
 export const updateInsumo = async (req, res) => {

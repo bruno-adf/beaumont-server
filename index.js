@@ -6,7 +6,6 @@ import dotenv from 'dotenv'
 import helmet from 'helmet'
 import morgan from 'morgan'
 
-//Rotas
 import authRoutes from './routes/auth.js'
 import projetosRoutes from './routes/projetos.js'
 import custosRoutes from './routes/custos.js'
@@ -22,7 +21,6 @@ app.use(helmet())
 app.use(morgan('common'))
 app.use(bodyParser.json())
 
-//Mongoose setup
 const PORT = process.env.PORT;
 mongoose.connect(process.env.MONGO_URL)
 .then(() => {

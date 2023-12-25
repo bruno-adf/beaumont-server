@@ -1,4 +1,4 @@
-import Projeto from '../models/Projeto.js'
+import Projeto from '../schemas/Projeto.js'
 
 export const updateCustos = async (req, res) => {
     const { data, id, userId } = req.body

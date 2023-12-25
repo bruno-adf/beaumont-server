@@ -1,4 +1,4 @@
-import Projeto, { ProjetoSchema } from "../models/Projeto.js"
+import Projeto, { ProjetoSchema } from "../schemas/Projeto.js"
 import { v4 as uuidv4 } from 'uuid'
 
 export const getProjetos = async (req, res) => {
